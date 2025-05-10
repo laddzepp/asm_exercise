@@ -8,16 +8,16 @@ section .data
 
 section .text 
 
-%include "print.asm"
+%include "../macro/print.asm"
 
 _start: 
 
-    mov rax, 10
+    mov rax, 23
     imul rax, 3600      
-    mov rbx, 23
+    mov rbx, 59
     imul rbx, 60        
     add rax, rbx        
-    add rax, 14
+    add rax, 59
     xor rcx, rcx        
     PRINT rax
 

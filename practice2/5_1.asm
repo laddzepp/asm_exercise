@@ -9,7 +9,7 @@ section .data
 
 section .text 
 
-%include "print.asm"
+%include "../macro/print.asm"
 
 _start: 
 

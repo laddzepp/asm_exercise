@@ -7,7 +7,7 @@ section .text
 	extern printf
 
 main: 
-	mov rax, 37934
+	mov rax, 86399
 	mov rbx, 3600
 	cqo 
    	idiv rbx 
