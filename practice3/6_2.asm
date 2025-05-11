@@ -2,12 +2,12 @@ global _start
 
 section .data 
 
-	buffer db 50 dup(0)
-	buffer2 db 50 dup(0)
-	ln db 0xA
+        buffer db 50 dup(0)
+        buffer2 db 50 dup(0)
+        ln db 0xA
 
-	array dd 5, 0
-	array_len equ $ - array
+        array dq 1, 1933403, 3, 5
+        array_len equ ($ - array)/8
 
 
 section .text 
@@ -16,16 +16,17 @@ section .text
 %include "../macro/print.asm"
 
 _start:
-	mov rcx, 0 
-	mov al, 0
+        mov rcx, 0 
+        xor rax, rax
+        xor rbx, rbx
 new_max: 
-	mov al, bl
+        mov rax, rbx
 for: 
-	mov bl, [array + rcx]
-	cmp bl, al 
-	jg new_max
-	add rcx, 4
-	cmp rcx, array_len
-	jl for 
-	PRINT rax
+        mov rbx, [array + rcx * 8]
+        cmp rbx, rax
+        jg new_max
+        inc rcx
+        cmp rcx, array_len
+        jl for 
+        PRINT rax
 
