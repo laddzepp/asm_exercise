@@ -15,7 +15,7 @@ main:
 for:
 	mov rax, [array + rcx * 4]
 	mov rbx, rax
-	and rax, 0x1
+	and rax, 1
 	cmp rax, 0
 	jz is_even
 is:
