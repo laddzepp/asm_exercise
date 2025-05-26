@@ -1,4 +1,4 @@
-# asm_exercise
+# asm_exercises
 
 
 ### Практическое занятие 1
