@@ -1,3 +1,6 @@
+
+; THIS ALGORITHM BASED ON CODE FROM THIS REPO: https://github.com/Sakib2263/64-Bit-NASM-Assembly-Code-Examples/tree/master
+
 segment .data
 
 	a dq 2
